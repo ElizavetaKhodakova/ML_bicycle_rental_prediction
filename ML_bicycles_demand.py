@@ -26,6 +26,7 @@ from imblearn.over_sampling import RandomOverSampler
 from sklearn.metrics import f1_score
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
+from sklearn.metrics import mean_squared_error,mean_absolute_error, r2_score
 
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.preprocessing import OrdinalEncoder
@@ -254,7 +255,6 @@ feature_importance_df
 
 cbr_pred = cbr.predict(X_test)
 
-from sklearn.metrics import mean_squared_error,mean_absolute_error, r2_score
 r2 = r2_score(y_test,cbr_pred)
 print(r2)
 
